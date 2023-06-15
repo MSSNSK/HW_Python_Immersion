@@ -3,19 +3,19 @@
 # отрицательных чисел и чисел больше 100 тысяч.
 
 
+from math import sqrt, ceil
+
+
 def is_prime_or_composite(num):
     if num == 1:
         print(f'Число {num} не является ни простым, ни составным!')
         quit()
     if 1 < num <= 100000:
-        count = 0
-        for _ in range(2, num // 2 + 1):
+        for _ in range(2, ceil(sqrt(num) + 1)):
             if num % _ == 0:
-                count += 1
-        if count == 2:
-            print(f'Число {num} cоставное.')
-        else:
-            print(f'Число {num} простое.')
+                print(f'Число {num} составное.')
+                quit()
+        print(f'Число {num} простое.')
     else:
         print('ОШИБКА ВВОДА!!!')
 
