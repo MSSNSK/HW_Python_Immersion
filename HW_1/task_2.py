@@ -4,15 +4,15 @@
 
 
 from math import sqrt, ceil
-
+import sys
 
 def is_prime_or_composite(num):
     if num == 1:
         print(f'Число {num} не является ни простым, ни составным!')
-        quit()
+        sys.exit()
     if 1 < num <= 100000:
-        for _ in range(2, ceil(sqrt(num) + 1)):
-            if num % _ == 0:
+        for i in range(2, ceil(sqrt(num) + 1)):
+            if num % i == 0:
                 print(f'Число {num} составное.')
                 quit()
         print(f'Число {num} простое.')

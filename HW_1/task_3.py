@@ -6,6 +6,8 @@
 
 
 from random import randint
+import sys
+
 
 lower_limit = 0
 upper_limit = 1000
@@ -28,5 +30,5 @@ while range_attempts != 0:
               '*** для большей эффективности рекомендуется выбирать среднее значение из диапазона ***', sep='\n')
     else:
         print('БИНГО!!!')
-        quit()
+        sys.exit()
 print(f'ИГРА ОКОНЧЕНА! ВЫ ПРОИГРАЛИ! (было загадано число {num}).')
