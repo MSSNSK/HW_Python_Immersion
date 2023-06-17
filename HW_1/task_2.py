@@ -14,7 +14,7 @@ def is_prime_or_composite(num):
         for i in range(2, ceil(sqrt(num) + 1)):
             if num % i == 0:
                 print(f'Число {num} составное.')
-                quit()
+                sys.exit()
         print(f'Число {num} простое.')
     else:
         print('ОШИБКА ВВОДА!!!')
