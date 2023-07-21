@@ -6,9 +6,9 @@ def fibonacci(num):
     start = 1
     fib_1 = 0
     fib_2 = 1
-    if num == 0:
-        yield '0'
-    elif num == 1:
+    if num == fib_1:
+        yield fib_1
+    elif num == fib_2:
         yield prefix_fib
     elif num == 2:
         yield '0, 1, 1'
